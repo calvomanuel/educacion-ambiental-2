@@ -1,0 +1,983 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EcoVida - Reciclaje y Clasificación de Residuos</title>
+  
+
+  <link rel="stylesheet" href="style.css">
+  
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+<body>
+
+  <nav class="navbar" id="navbar">
+    <a href="#inicio" class="brand">
+      <svg class="brand-icon-svg" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 36C12 36 10 20 26 14C42 8 40 4 40 4C40 4 42 22 28 30C16 37 12 36 12 36Z" fill="#72ba43"/>
+        <path d="M12 36C12 36 18 26 32 20" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round"/>
+        <path d="M8 40C14 36 20 35 25 34" stroke="#a5d6a7" stroke-width="2" stroke-linecap="round"/>
+        <path d="M10 28C10 28 4 18 16 12C28 6 26 2 26 2C26 2 28 16 18 22C12 26 10 28 10 28Z" fill="#a5d6a7" opacity="0.85"/>
+      </svg>
+      <div class="brand-text">
+        <span class="brand-title">EcoVida</span>
+        <span class="brand-subtitle">Cuida el planeta</span>
+      </div>
+    </a>
+
+    <!-- Botón Menú Móvil -->
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">☰</button>
+
+    <!-- Enlaces del Navbar -->
+    <ul class="nav-links" id="navLinks">
+      <li class="nav-item active">
+        <a href="#inicio">
+          <span class="nav-icon">🏠</span> Inicio
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#cuidado-planeta">
+          <span class="nav-icon">💧</span> Cuidado del Agua
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#reciclaje">
+          <span class="nav-icon">♻️</span> Reciclaje
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#consejos">
+          <span class="nav-icon">💡</span> Consejos
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#juego">
+          <span class="nav-icon">🎮</span> Juego
+        </a>
+      </li>
+      <li class="nav-item contact-trigger-item">
+        <button type="button" class="open-contact-btn">
+          <span class="nav-icon">✉️</span> Contacto
+        </button>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Overlay para menú móvil -->
+  <div class="nav-overlay" id="navOverlay" aria-hidden="true"></div>
+
+  <!-- ========================================================
+       SECCIÓN PRINCIPAL (HERO Y TARJETAS IGUAL A LA IMAGEN)
+       ======================================================== -->
+  <main class="container" id="inicio">
+
+    <!-- PORTADA HERO -->
+    <section class="hero-section">
+      <div class="hero-content">
+        <h1 class="hero-title">
+          <span>Reciclaje y</span>
+          <span>Clasificación de Residuos</span>
+        </h1>
+        <h2 class="hero-subtitle">
+          ¡Pequeñas acciones, grandes cambios!
+        </h2>
+        <p class="hero-description">
+          Reciclar es separar y dar un nuevo uso a los materiales para reducir la contaminación y cuidar nuestro planeta. Aprende cómo proteger nuestros ríos, el agua en casa y mantener limpia nuestra comunidad.
+        </p>
+        <div class="hero-cta-buttons">
+          <a href="#cuidado-planeta" class="btn-primary" id="learnMoreBtn">
+            Aprende más <span class="arrow">→</span>
+          </a>
+          <a href="#reciclaje" class="btn-secondary">
+            Ver Contenedores ♻️
+          </a>
+        </div>
+      </div>
+
+      <!-- GRÁFICO: PLANETA TIERRA CON RECICLAJE Y LEMA 3R -->
+      <div class="hero-graphic">
+        <!-- Hojas animadas flotantes -->
+        <svg class="leaf-deco leaf-1" viewBox="0 0 32 32" fill="#72ba43">
+          <path d="M4 28C4 28 8 10 22 6C28 4 30 2 30 2C30 2 28 14 18 20C10 25 4 28 4 28Z"/>
+        </svg>
+        <svg class="leaf-deco leaf-2" viewBox="0 0 32 32" fill="#8bc34a">
+          <path d="M28 28C28 28 24 12 12 8C6 6 2 2 2 2C2 2 4 14 14 20C22 25 28 28 28 28Z"/>
+        </svg>
+        <svg class="leaf-deco leaf-3" viewBox="0 0 32 32" fill="#4caf50">
+          <path d="M4 28C4 28 8 10 22 6C28 4 30 2 30 2C30 2 28 14 18 20C10 25 4 28 4 28Z"/>
+        </svg>
+
+        <div class="earth-container">
+          <!-- Ilustración SVG del Planeta Tierra con Símbolo de Reciclaje -->
+          <svg class="earth-svg" viewBox="0 0 260 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <radialGradient id="oceanGrad" cx="35%" cy="35%" r="65%">
+                <stop offset="0%" stop-color="#42a5f5"/>
+                <stop offset="60%" stop-color="#1e88e5"/>
+                <stop offset="100%" stop-color="#1565c0"/>
+              </radialGradient>
+              <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+                <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#1b5e20" flood-opacity="0.25"/>
+              </filter>
+            </defs>
+
+            <!-- Océano del Globo -->
+            <circle cx="130" cy="130" r="115" fill="url(#oceanGrad)" filter="url(#softGlow)"/>
+
+            <!-- Continentes Verdes -->
+            <path d="M85 45C75 60 70 85 80 100C90 115 105 125 90 145C80 155 70 170 85 195C90 205 105 210 115 215C120 205 110 190 120 180C130 170 145 180 155 170C165 160 160 145 150 135C140 125 150 110 160 100C170 90 180 75 165 60C150 45 130 40 115 35C100 35 90 40 85 45Z" fill="#4caf50"/>
+            <path d="M175 65C185 75 200 80 210 70C220 60 225 50 215 40C205 35 190 45 175 65Z" fill="#66bb6a"/>
+            <path d="M165 140C175 145 195 155 190 175C185 190 170 200 160 205C150 210 145 200 150 185C155 170 160 155 165 140Z" fill="#43a047"/>
+            <path d="M45 100C55 110 50 130 40 135C30 140 25 125 30 110C35 95 40 95 45 100Z" fill="#66bb6a"/>
+
+            <!-- Anillo y Brillo Atmosférico -->
+            <circle cx="130" cy="130" r="115" stroke="rgba(255,255,255,0.4)" stroke-width="4"/>
+
+            <!-- Símbolo de Reciclaje Blanco en el Centro (3 Flechas) -->
+            <g transform="translate(130, 130) scale(1.15) translate(-36, -36)">
+              <path d="M36 10L42 22H32L36 10Z" fill="#ffffff"/>
+              <path d="M26 20C30 17 38 17 44 20L48 13C40 9 28 9 18 15L24 22L26 20Z" fill="#ffffff"/>
+
+              <path d="M58 48L58 34L50 40L58 48Z" fill="#ffffff"/>
+              <path d="M50 32C54 36 54 44 51 50L58 55C63 47 63 35 55 27L46 32L50 32Z" fill="#ffffff"/>
+
+              <path d="M14 48L22 40L14 34L14 48Z" fill="#ffffff"/>
+              <path d="M22 48C18 44 18 36 21 30L14 25C9 33 9 45 17 53L26 48L22 48Z" fill="#ffffff"/>
+            </g>
+          </svg>
+        </div>
+
+        <!-- Lema 3R: Reduce, Reutiliza, Recicla -->
+        <div class="recycle-slogan">
+          <span class="word">Reduce</span>
+          <span class="word">Reutiliza</span>
+          <span class="word">Recicla</span>
+          <!-- Subrayado artístico -->
+          <svg class="swoosh-underline" viewBox="0 0 140 18" fill="none">
+            <path d="M5 12C35 4 95 3 135 14" stroke="#2e7d32" stroke-width="4.5" stroke-linecap="round"/>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         SECCIÓN DE LAS 3 TARJETAS PRINCIPALES (RECREACIÓN FIEL)
+         ======================================================== -->
+    <section class="cards-grid">
+
+      <!-- TARJETA 1: ¿CÓMO CLASIFICAR LOS RESIDUOS? -->
+      <article class="eco-card">
+        <header class="card-header-banner">
+          <span class="card-icon">♻️</span>
+          <span>¿Cómo clasificar los residuos?</span>
+        </header>
+        <div class="card-body">
+          <div class="bins-container">
+            <!-- 1. Orgánicos -->
+            <div class="bin-item bin-organico bin-clickable" data-bin-type="organico" title="Clic para ver detalles de Orgánicos">
+              <div class="bin-shape">
+                <svg class="bin-recycle-icon" viewBox="0 0 24 24"><path d="M12 2L15 7H9L12 2ZM21 15L16 12V18L21 15ZM3 15L8 18V12L3 15ZM12 22C6.48 22 2 17.52 2 12C2 9.5 2.9 7.2 4.4 5.5L6 7.1C4.8 8.4 4 10.1 4 12C4 16.42 7.58 20 12 20C14.2 20 16.2 19.1 17.6 17.7L19.2 19.3C17.4 21 14.8 22 12 22Z"/></svg>
+                <span class="bin-label">Orgánicos</span>
+              </div>
+              <div class="bin-sample-item" title="Manzana (Residuo orgánico)">
+                <svg width="34" height="38" viewBox="0 0 34 38" fill="none">
+                  <path d="M17 6C15 2 13 1 12 1" stroke="#4e342e" stroke-width="2.5" stroke-linecap="round"/>
+                  <path d="M17 5C19 3 23 2 25 4C24 6 22 7 19 6" fill="#7cb342"/>
+                  <path d="M8 12C4 16 4 26 8 31C11 35 15 36 17 34C19 36 23 35 26 31C30 26 30 16 26 12C23 9 19 11 17 11C15 11 11 9 8 12Z" fill="#e53935"/>
+                  <path d="M26 16C23 18 23 24 26 26C28 24 28 18 26 16Z" fill="#fff9c4"/>
+                </svg>
+              </div>
+            </div>
+
+            <!-- 2. Plástico -->
+            <div class="bin-item bin-plastico bin-clickable" data-bin-type="plastico" title="Clic para ver detalles de Plásticos">
+              <div class="bin-shape">
+                <svg class="bin-recycle-icon" viewBox="0 0 24 24"><path d="M12 2L15 7H9L12 2ZM21 15L16 12V18L21 15ZM3 15L8 18V12L3 15ZM12 22C6.48 22 2 17.52 2 12C2 9.5 2.9 7.2 4.4 5.5L6 7.1C4.8 8.4 4 10.1 4 12C4 16.42 7.58 20 12 20C14.2 20 16.2 19.1 17.6 17.7L19.2 19.3C17.4 21 14.8 22 12 22Z"/></svg>
+                <span class="bin-label">Plástico</span>
+              </div>
+              <div class="bin-sample-item" title="Botella de plástico azul">
+                <svg width="24" height="42" viewBox="0 0 24 42" fill="none">
+                  <rect x="8" y="2" width="8" height="4" rx="1.5" fill="#0288d1"/>
+                  <path d="M9 6H15L18 12V36C18 39 16 41 12 41C8 41 6 39 6 36V12L9 6Z" fill="#81d4fa" stroke="#29b6f6" stroke-width="1.5"/>
+                  <path d="M8 20H16M8 26H16" stroke="#4fc3f7" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+              </div>
+            </div>
+
+            <!-- 3. Papel -->
+            <div class="bin-item bin-papel bin-clickable" data-bin-type="papel" title="Clic para ver detalles de Papel y Cartón">
+              <div class="bin-shape">
+                <svg class="bin-recycle-icon" viewBox="0 0 24 24"><path d="M12 2L15 7H9L12 2ZM21 15L16 12V18L21 15ZM3 15L8 18V12L3 15ZM12 22C6.48 22 2 17.52 2 12C2 9.5 2.9 7.2 4.4 5.5L6 7.1C4.8 8.4 4 10.1 4 12C4 16.42 7.58 20 12 20C14.2 20 16.2 19.1 17.6 17.7L19.2 19.3C17.4 21 14.8 22 12 22Z"/></svg>
+                <span class="bin-label">Papel</span>
+              </div>
+              <div class="bin-sample-item" title="Pila de papel y cartón">
+                <svg width="34" height="34" viewBox="0 0 34 34" fill="none">
+                  <path d="M6 24L26 21L28 27L8 30L6 24Z" fill="#ffecb3" stroke="#fbc02d" stroke-width="1.2"/>
+                  <path d="M8 17L27 15L29 21L10 23L8 17Z" fill="#fff8e1" stroke="#fbc02d" stroke-width="1.2"/>
+                  <path d="M7 10L26 8L28 14L9 16L7 10Z" fill="#ffffff" stroke="#fbc02d" stroke-width="1.2"/>
+                  <path d="M11 12L23 10M11 14L21 12" stroke="#b0bec5" stroke-width="1"/>
+                </svg>
+              </div>
+            </div>
+
+            <!-- 4. Vidrio -->
+            <div class="bin-item bin-vidrio bin-clickable" data-bin-type="vidrio" title="Clic para ver detalles de Vidrio">
+              <div class="bin-shape">
+                <svg class="bin-recycle-icon" viewBox="0 0 24 24"><path d="M12 2L15 7H9L12 2ZM21 15L16 12V18L21 15ZM3 15L8 18V12L3 15ZM12 22C6.48 22 2 17.52 2 12C2 9.5 2.9 7.2 4.4 5.5L6 7.1C4.8 8.4 4 10.1 4 12C4 16.42 7.58 20 12 20C14.2 20 16.2 19.1 17.6 17.7L19.2 19.3C17.4 21 14.8 22 12 22Z"/></svg>
+                <span class="bin-label">Vidrio</span>
+              </div>
+              <div class="bin-sample-item" title="Botella de vidrio verde">
+                <svg width="22" height="42" viewBox="0 0 22 42" fill="none">
+                  <rect x="8" y="2" width="6" height="5" rx="1" fill="#004d40"/>
+                  <path d="M8 7H14L17 16V36C17 39 15 41 11 41C7 41 5 39 5 36V16L8 7Z" fill="#4db6ac" stroke="#00796b" stroke-width="1.5"/>
+                  <path d="M8 18V34" stroke="#e0f2f1" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+              </div>
+            </div>
+
+            <!-- 5. Metal -->
+            <div class="bin-item bin-metal bin-clickable" data-bin-type="metal" title="Clic para ver detalles de Metal y Aluminio">
+              <div class="bin-shape">
+                <svg class="bin-recycle-icon" viewBox="0 0 24 24"><path d="M12 2L15 7H9L12 2ZM21 15L16 12V18L21 15ZM3 15L8 18V12L3 15ZM12 22C6.48 22 2 17.52 2 12C2 9.5 2.9 7.2 4.4 5.5L6 7.1C4.8 8.4 4 10.1 4 12C4 16.42 7.58 20 12 20C14.2 20 16.2 19.1 17.6 17.7L19.2 19.3C17.4 21 14.8 22 12 22Z"/></svg>
+                <span class="bin-label">Metal</span>
+              </div>
+              <div class="bin-sample-item" title="Lata de metal / aluminio">
+                <svg width="26" height="36" viewBox="0 0 26 36" fill="none">
+                  <ellipse cx="13" cy="6" rx="10" ry="4" fill="#cfd8dc" stroke="#78909c" stroke-width="1.5"/>
+                  <path d="M3 6V30C3 32.2 7.5 34 13 34C18.5 34 23 32.2 23 30V6" fill="#b0bec5" stroke="#78909c" stroke-width="1.5"/>
+                  <ellipse cx="13" cy="30" rx="10" ry="4" fill="#90a4ae"/>
+                  <path d="M6 14C9 16 17 16 20 14" stroke="#ffffff" stroke-width="1.5"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <p class="bin-help-hint">💡 Toca cualquiera de los botes para ver qué depositar en él</p>
+        </div>
+      </article>
+
+      <!-- TARJETA 2: CONSEJOS PARA RECICLAR -->
+      <article class="eco-card" id="consejos-card">
+        <header class="card-header-standard">
+          <span class="card-icon">💡</span>
+          <span>Consejos para reciclar</span>
+        </header>
+        <div class="card-body">
+          <ul class="eco-checklist">
+            <li>
+              <span class="check-badge">✓</span>
+              <span>Separa la basura en casa.</span>
+            </li>
+            <li>
+              <span class="check-badge">✓</span>
+              <span>Limpia los envases antes de reciclar.</span>
+            </li>
+            <li>
+              <span class="check-badge">✓</span>
+              <span>Reduce el uso de plásticos.</span>
+            </li>
+            <li>
+              <span class="check-badge">✓</span>
+              <span>Reutiliza materiales siempre que puedas.</span>
+            </li>
+            <li>
+              <span class="check-badge">✓</span>
+              <span>Deposita los residuos en su contenedor correspondiente.</span>
+            </li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- TARJETA 3: ¿POR QUÉ ES IMPORTANTE? -->
+      <article class="eco-card">
+        <header class="card-header-standard">
+          <span class="card-icon">⭐</span>
+          <span>¿Por qué es importante?</span>
+        </header>
+        <div class="card-body importance-content">
+          <div class="sprout-container">
+            <svg class="sprout-svg" viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <ellipse cx="45" cy="74" rx="38" ry="14" fill="#5d4037"/>
+              <ellipse cx="45" cy="72" rx="32" ry="10" fill="#795548"/>
+              <circle cx="28" cy="75" r="3" fill="#4e342e"/>
+              <circle cx="58" cy="77" r="2.5" fill="#4e342e"/>
+              <circle cx="42" cy="78" r="3" fill="#4e342e"/>
+              <path d="M45 70C45 52 46 36 45 28" stroke="#4caf50" stroke-width="5" stroke-linecap="round"/>
+              <path d="M45 42C32 40 20 48 22 28C34 26 43 36 45 42Z" fill="#66bb6a"/>
+              <path d="M44 40C36 36 30 34 26 31" stroke="#388e3c" stroke-width="1.8" stroke-linecap="round"/>
+              <path d="M45 36C58 32 70 40 68 20C56 18 47 28 45 36Z" fill="#72ba43"/>
+              <path d="M46 34C54 30 60 28 64 24" stroke="#2e7d32" stroke-width="1.8" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div>
+            <h3 class="importance-list-title">El reciclaje ayuda a:</h3>
+            <ul class="eco-checklist">
+              <li>
+                <span class="check-badge">✓</span>
+                <span>Reducir la contaminación.</span>
+              </li>
+              <li>
+                <span class="check-badge">✓</span>
+                <span>Ahorra recursos naturales.</span>
+              </li>
+              <li>
+                <span class="check-badge">✓</span>
+                <span>Cuidar la vida en el planeta.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+    </section>
+
+    <div class="footer-banner">
+      <div class="footer-left">
+        <svg class="footer-leaf-deco" viewBox="0 0 48 48" fill="none">
+          <path d="M6 42C6 42 12 18 36 10C36 10 38 28 20 36C12 39 6 42 6 42Z" fill="#72ba43"/>
+          <path d="M6 42C6 42 16 30 30 22" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        <h2 class="footer-motto">¡Juntos podemos hacer un mundo más limpio y verde!</h2>
+      </div>
+
+      <div class="footer-right">
+        <!-- Mascota Caricatura del Planeta Tierra Saludando con Carita Feliz -->
+        <div class="mascot-container">
+          <svg class="mascot-svg" viewBox="0 0 160 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M35 80C22 75 14 62 16 52C18 45 28 50 32 58L40 76" fill="#42a5f5" stroke="#1e88e5" stroke-width="3" stroke-linecap="round"/>
+            <path d="M125 76L138 52C142 44 150 48 148 56C145 68 136 78 125 82" fill="#42a5f5" stroke="#1e88e5" stroke-width="3" stroke-linecap="round"/>
+            <circle cx="80" cy="80" r="54" fill="#42a5f5"/>
+            <path d="M50 48C45 60 55 72 65 65C75 58 70 42 60 40C54 39 51 42 50 48Z" fill="#66bb6a"/>
+            <path d="M95 45C110 50 120 65 115 75C110 82 98 78 95 68C92 60 90 52 95 45Z" fill="#66bb6a"/>
+            <path d="M60 105C70 110 85 118 95 110C105 102 98 90 90 92C80 94 72 98 60 105Z" fill="#66bb6a"/>
+            <ellipse cx="68" cy="74" rx="5" ry="7" fill="#1b2e1b"/>
+            <circle cx="66.5" cy="71.5" r="2.2" fill="#ffffff"/>
+            <ellipse cx="94" cy="74" rx="5" ry="7" fill="#1b2e1b"/>
+            <circle cx="92.5" cy="71.5" r="2.2" fill="#ffffff"/>
+            <ellipse cx="58" cy="83" rx="6" ry="4" fill="#ff8a80" opacity="0.8"/>
+            <ellipse cx="104" cy="83" rx="6" ry="4" fill="#ff8a80" opacity="0.8"/>
+            <path d="M72 84C75 92 87 92 90 84" stroke="#1b2e1b" stroke-width="3.5" stroke-linecap="round"/>
+            <path d="M18 36L10 30" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+            <path d="M26 24L24 14" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+            <path d="M142 36L150 30" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+            <path d="M134 24L136 14" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+   
+    <section class="section-full" id="cuidado-planeta">
+      <div class="section-title-wrap">
+        <span class="section-pill-tag water">Protección y Cuidado Ambiental Integral</span>
+        <h2 class="section-heading">Cuidado del Planeta: Ríos, Agua y Hogares Limpios</h2>
+        <p class="section-subtext">
+          El agua es la fuente de vida de la Tierra. Cuidar nuestros ríos, evitar arrojar residuos a los cauces y mantener limpias las pilas y contenedores de agua de nuestras casas es fundamental para proteger el medio ambiente y la salud de nuestras familias.
+        </p>
+      </div>
+
+      <div class="care-cards-grid">
+        <!-- Tarjeta 1: Cuidado de Ríos y Fuentes de Agua -->
+        <article class="care-card">
+          <div class="care-card-header">
+            <div class="care-card-icon icon-water">🌊</div>
+            <div>
+              <h3 class="care-card-title">Cuidado de Ríos, Lagos y Mares</h3>
+              <span style="font-size: 0.85rem; color: #0288d1; font-weight: 700;">Protección de las cuencas hídricas</span>
+            </div>
+          </div>
+          <p class="care-card-desc">
+            Los ríos son las venas de nuestro planeta. Cada pedazo de plástico arrojado en una zanja o calle termina arrastrado por la lluvia hacia los ríos y océanos, asfixiando peces, tortugas y aves.
+          </p>
+          <ul class="care-tips-list">
+            <li>
+              <span class="care-point-badge badge-blue">1</span>
+              <span><strong>Cero basura a las orillas:</strong> Nunca tires bolsas, botellas, pañales ni latas en cauces, arroyos o playas.</span>
+            </li>
+            <li>
+              <span class="care-point-badge badge-blue">2</span>
+              <span><strong>Nunca viertas aceite en el fregadero:</strong> 1 solo litro de aceite de cocina usado contamina hasta 1,000 litros de agua pura. Guárdalo en una botella plástica cerrada y entrégalo para reciclaje.</span>
+            </li>
+            <li>
+              <span class="care-point-badge badge-blue">3</span>
+              <span><strong>Reduce químicos y detergentes:</strong> Usa jabones biodegradables. Los detergentes con fosfatos generan sobrecrecimiento de algas que dejan sin oxígeno a la fauna marina.</span>
+            </li>
+            <li>
+              <span class="care-point-badge badge-blue">4</span>
+              <span><strong>Reforesta riberas:</strong> Los árboles alrededor de los ríos filtran el agua de manera natural y previenen inundaciones y deslaves.</span>
+            </li>
+          </ul>
+          <div class="care-alert-box">
+            <strong>⚠️ ¿Sabías que?</strong>
+            Más del 80% del plástico que flota en los océanos llega directamente a través de ríos y quebradas urbanas contaminadas por la basura no clasificada.
+          </div>
+        </article>
+
+        <!-- Tarjeta 2: Manejo de Pilas y Contenedores de Agua en Casa -->
+        <article class="care-card">
+          <div class="care-card-header">
+            <div class="care-card-icon icon-barrel">💧</div>
+            <div>
+              <h3 class="care-card-title">Manejo de Pilas, Barriles y Agua en Casa</h3>
+              <span style="font-size: 0.85rem; color: #2e7d32; font-weight: 700;">Higiene del agua y prevención de enfermedades</span>
+            </div>
+          </div>
+          <p class="care-card-desc">
+            El almacenamiento de agua en nuestros hogares debe ser seguro e higiénico. El agua estancada sin protección se convierte rápidamente en criaderos de mosquitos peligrosos (Dengue, Zika y Chikungunya).
+          </p>
+          <ul class="care-tips-list">
+            <li>
+              <span class="care-point-badge badge-green">1</span>
+              <span><strong>Cepillado semanal de pilas:</strong> Lava y cepilla las paredes de las pilas, tanques y barriles con cloro para eliminar los huevecillos de zancudos adheridos.</span>
+            </li>
+            <li>
+              <span class="care-point-badge badge-green">2</span>
+              <span><strong>Tapa herméticamente tus recipientes:</strong> Todo barril, balde o cisterna que almacene agua para consumo o aseo debe estar siempre bien tapado.</span>
+            </li>
+            <li>
+              <span class="care-point-badge badge-green">3</span>
+              <span><strong>Bota el agua acumulada en patios:</strong> Voltea panas, maceteras vacías, latas y llantas viejas para que no retengan agua de lluvia estancada.</span>
+            </li>
+            <li>
+              <span class="care-point-badge badge-green">4</span>
+              <span><strong>Cambio diario de agua para mascotas:</strong> Lava los bebederos de perros, gatos y aves todos los días antes de rellenar.</span>
+            </li>
+          </ul>
+          <div class="care-alert-box" style="border-left-color: #4caf50; background: #e8f5e9;">
+            <strong style="color: #1b5e20;">🛡️ Regla de Oro:</strong>
+            "Recipiente que no ocupes, bótalo o ponlo boca abajo". Sin agua estancada, no hay zancudos ni enfermedades en tu hogar.
+          </div>
+        </article>
+
+        <!-- Tarjeta 3: Cero Quema de Basura y Manejo Seguro -->
+        <article class="care-card">
+          <div class="care-card-header">
+            <div class="care-card-icon icon-smoke">🚫</div>
+            <div>
+              <h3 class="care-card-title">No a la Quema de Basura y Plásticos</h3>
+              <span style="font-size: 0.85rem; color: #e65100; font-weight: 700;">Aire limpio y protección pulmonar</span>
+            </div>
+          </div>
+          <p class="care-card-desc">
+            Quemar basura, hojas secas o botellas plásticas en los patios es una práctica peligrosa que libera sustancias tóxicas cancerígenas (como dioxinas y furanos) al aire que respiran nuestros niños y abuelos.
+          </p>
+          <ul class="care-tips-list">
+            <li>
+              <span class="care-point-badge badge-orange">1</span>
+              <span><strong>La quema deteriora el suelo:</strong> El fuego destruye los microorganismos beneficiosos que nutren la tierra y la vuelven estéril.</span>
+            </li>
+            <li>
+              <span class="care-point-badge badge-orange">2</span>
+              <span><strong>Convierte las hojas en abono:</strong> En vez de prenderles fuego, junta las hojas y restos de poda para crear composta vegetal orgánica gratis.</span>
+            </li>
+            <li>
+              <span class="care-point-badge badge-orange">3</span>
+              <span><strong>El humo de plástico es veneno puro:</strong> Inhalar humo de plásticos quemados agrava el asma, bronquitis y causa problemas respiratorios severos.</span>
+            </li>
+            <li>
+              <span class="care-point-badge badge-orange">4</span>
+              <span><strong>Espera el camión recolector:</strong> Almacena tus residuos secos clasificados hasta los días oficiales de recolección de tu municipio.</span>
+            </li>
+          </ul>
+          <div class="care-alert-box" style="border-left-color: #ff9800; background: #fff3e0;">
+            <strong style="color: #bf360c;">🌬️ Respira Aire Puro:</strong>
+            Al no quemar basura proteges la capa de ozono, previenes incendios accidentales y aseguras aire limpio para toda tu comunidad.
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section-full" id="reciclaje">
+      <div class="section-title-wrap">
+        <span class="section-pill-tag">Guía Educativa Completa</span>
+        <h2 class="section-heading">Clasificación Detallada de Residuos</h2>
+        <p class="section-subtext">Aprende paso a paso qué materiales colocar en cada contenedor, cómo limpiarlos antes de depositarlos y su impacto en la conservación de la Tierra.</p>
+      </div>
+
+      <!-- Pestañas de Navegación por Material -->
+      <div class="tabs-navigation">
+        <button class="tab-btn active" data-tab="tab-organico">🟢 Orgánicos</button>
+        <button class="tab-btn" data-tab="tab-plastico">🔵 Plásticos</button>
+        <button class="tab-btn" data-tab="tab-papel">🟡 Papel y Cartón</button>
+        <button class="tab-btn" data-tab="tab-vidrio">🟢 Vidrio</button>
+        <button class="tab-btn" data-tab="tab-metal">⚪ Metales y Aluminio</button>
+      </div>
+
+      <!-- Panel 1: Orgánicos -->
+      <div class="tab-panel active" id="tab-organico">
+        <div class="panel-info">
+          <h3><span>🟢</span> Residuos Orgánicos</h3>
+          <p class="panel-description">
+            Los residuos orgánicos son de origen biológico vegetal o animal. Al separarlos adecuadamente, evitamos que liberen gas metano en los vertederos y podemos transformarlos en abono nutritivo (composta) para plantas y cultivos familiares.
+          </p>
+          <div class="waste-rules">
+            <div class="rule-box do-throw">
+              <h4>✅ Qué depositar:</h4>
+              <ul>
+                <li>Cáscaras de frutas y verduras</li>
+                <li>Restos de café y bolsitas de té</li>
+                <li>Cáscaras de huevo trituradas</li>
+                <li>Hojas secas, flores y ramas del jardín</li>
+                <li>Servilletas manchadas de comida vegetal</li>
+              </ul>
+            </div>
+            <div class="rule-box dont-throw">
+              <h4>❌ Qué NO depositar:</h4>
+              <ul>
+                <li>Plásticos ni envolturas metálicas</li>
+                <li>Excremento de mascotas con arena química</li>
+                <li>Aceites y grasas de freír</li>
+                <li>Medicamentos vencidos</li>
+              </ul>
+            </div>
+          </div>
+          <div class="eco-fact">🌱 Tiempo de descomposición: 2 a 16 semanas.</div>
+        </div>
+        <div class="panel-media">
+          <svg class="panel-image-preview" viewBox="0 0 160 160" fill="none">
+            <circle cx="80" cy="80" r="70" fill="#e8f5e9"/>
+            <path d="M50 110C45 80 65 50 90 45C115 40 125 70 120 95C115 120 80 125 50 110Z" fill="#4caf50"/>
+            <path d="M90 45C85 25 70 20 65 20C65 20 75 35 78 43" stroke="#2e7d32" stroke-width="4" stroke-linecap="round"/>
+          </svg>
+          <h4>El ciclo natural de la tierra</h4>
+          <p>Un tercio de toda la basura del hogar es orgánica y puede volver a ser tierra fértil en tu jardín.</p>
+        </div>
+      </div>
+
+      <!-- Panel 2: Plásticos -->
+      <div class="tab-panel" id="tab-plastico">
+        <div class="panel-info">
+          <h3><span>🔵</span> Plásticos y Envases (PET, PEAD, etc.)</h3>
+          <p class="panel-description">
+            Los plásticos provienen de derivados del petróleo y tardan siglos en degradarse. Clasificarlos permite fundirlos para crear nuevas botellas, ropa sintética, bancos de parques y tuberías.
+          </p>
+          <div class="waste-rules">
+            <div class="rule-box do-throw">
+              <h4>✅ Qué depositar:</h4>
+              <ul>
+                <li>Botellas de agua y refresco (PET 1)</li>
+                <li>Envases de leche, champú y detergente (PEAD 2)</li>
+                <li>Bolsas limpias y secas</li>
+                <li>Tapas plásticas de botellas</li>
+              </ul>
+            </div>
+            <div class="rule-box dont-throw">
+              <h4>❌ Qué NO depositar:</h4>
+              <ul>
+                <li>Juguetes con circuitos electrónicos</li>
+                <li>Mangueras o plásticos de PVC tóxico</li>
+                <li>Envases con químicos peligrosos</li>
+                <li>Cepillos de dientes viejos</li>
+              </ul>
+            </div>
+          </div>
+          <div class="eco-fact">⏳ Tiempo de descomposición: 150 a 500 años.</div>
+        </div>
+        <div class="panel-media">
+          <svg class="panel-image-preview" viewBox="0 0 160 160" fill="none">
+            <circle cx="80" cy="80" r="70" fill="#e1f5fe"/>
+            <rect x="68" y="25" width="24" height="15" rx="4" fill="#0288d1"/>
+            <path d="M62 40H98L110 70V130C110 138 104 144 96 144H64C56 144 50 138 50 130V70L62 40Z" fill="#29b6f6"/>
+            <path d="M58 80H102M58 100H102" stroke="#b3e5fc" stroke-width="3"/>
+          </svg>
+          <h4>Regla de oro del plástico</h4>
+          <p>Enjuaga, seca y aplasta la botella para que ocupe menos espacio en el camión de reciclaje.</p>
+        </div>
+      </div>
+
+      <!-- Panel 3: Papel y Cartón -->
+      <div class="tab-panel" id="tab-papel">
+        <div class="panel-info">
+          <h3><span>🟡</span> Papel y Cartón</h3>
+          <p class="panel-description">
+            Por cada tonelada de cartón y papel que reciclamos, salvamos aproximadamente 17 árboles maduros y ahorramos más de 26,000 litros de agua limpia.
+          </p>
+          <div class="waste-rules">
+            <div class="rule-box do-throw">
+              <h4>✅ Qué depositar:</h4>
+              <ul>
+                <li>Cajas de cartón corrugado limpias y desarmadas</li>
+                <li>Periódicos, guías y revistas</li>
+                <li>Hojas de cuaderno y cartas</li>
+                <li>Bolsas de papel secas</li>
+              </ul>
+            </div>
+            <div class="rule-box dont-throw">
+              <h4>❌ Qué NO depositar:</h4>
+              <ul>
+                <li>Cajas de pizza llenas de grasa y queso</li>
+                <li>Papel carbón o papel térmico de facturas</li>
+                <li>Papel higiénico usado</li>
+                <li>Papel plastificado o con purpurina</li>
+              </ul>
+            </div>
+          </div>
+          <div class="eco-fact">🌲 Ahorro: 1 tonelada = 17 árboles salvados.</div>
+        </div>
+        <div class="panel-media">
+          <svg class="panel-image-preview" viewBox="0 0 160 160" fill="none">
+            <circle cx="80" cy="80" r="70" fill="#fffde7"/>
+            <rect x="45" y="45" width="70" height="80" rx="6" fill="#fff59d" stroke="#fbc02d" stroke-width="3"/>
+            <path d="M58 65H102M58 80H102M58 95H88" stroke="#f57f17" stroke-width="3" stroke-linecap="round"/>
+          </svg>
+          <h4>Mantén el cartón seco</h4>
+          <p>El papel mojado o con moho no puede ser reciclado, ¡mantenlo siempre seco!</p>
+        </div>
+      </div>
+
+      <!-- Panel 4: Vidrio -->
+      <div class="tab-panel" id="tab-vidrio">
+        <div class="panel-info">
+          <h3><span>🟢</span> Envases de Vidrio</h3>
+          <p class="panel-description">
+            El vidrio es uno de los materiales más nobles y limpios: es 100% reciclable una cantidad infinita de veces, ahorrando un 30% de energía frente al vidrio virgen hecho con arena sílice.
+          </p>
+          <div class="waste-rules">
+            <div class="rule-box do-throw">
+              <h4>✅ Qué depositar:</h4>
+              <ul>
+                <li>Botellas de vino, cerveza, refresco y jugo</li>
+                <li>Frascos de mayonesa, mermeladas y compotas</li>
+                <li>Tarros de conserva sin tapas metálicas</li>
+              </ul>
+            </div>
+            <div class="rule-box dont-throw">
+              <h4>❌ Qué NO depositar:</h4>
+              <ul>
+                <li>Espejos rotos ni cristales de ventanas</li>
+                <li>Bombillos o focos (contienen mercurio/gases)</li>
+                <li>Vasos de cristal fino o vajillas de cerámica</li>
+                <li>Tubos fluorescentes</li>
+              </ul>
+            </div>
+          </div>
+          <div class="eco-fact">♾️ Infinitamente reciclable sin perder pureza.</div>
+        </div>
+        <div class="panel-media">
+          <svg class="panel-image-preview" viewBox="0 0 160 160" fill="none">
+            <circle cx="80" cy="80" r="70" fill="#e0f2f1"/>
+            <rect x="72" y="25" width="16" height="15" rx="3" fill="#004d40"/>
+            <path d="M72 40H88L98 65V135H62V65L72 40Z" fill="#26a69a" stroke="#00796b" stroke-width="3"/>
+            <path d="M70 75V125" stroke="#b2dfdb" stroke-width="3" stroke-linecap="round"/>
+          </svg>
+          <h4>Quita tapas y corchos</h4>
+          <p>Retira las tapas metálicas (al gris) y el plástico (al azul) antes de echar la botella.</p>
+        </div>
+      </div>
+
+      <!-- Panel 5: Metales y Aluminio -->
+      <div class="tab-panel" id="tab-metal">
+        <div class="panel-info">
+          <h3><span>⚪</span> Metales y Latas de Aluminio</h3>
+          <p class="panel-description">
+            Reciclar una sola lata de aluminio ahorra suficiente energía para mantener encendido un televisor durante 3 horas completas. Además, reduce enormemente la necesidad de excavar minas a cielo abierto.
+          </p>
+          <div class="waste-rules">
+            <div class="rule-box do-throw">
+              <h4>✅ Qué depositar:</h4>
+              <ul>
+                <li>Latas de refresco, cerveza y bebidas</li>
+                <li>Latas de atún, frijoles y conservas (limpias)</li>
+                <li>Tapas metálicas de botellas (corcholatas)</li>
+                <li>Papel de aluminio sin restos de grasa</li>
+              </ul>
+            </div>
+            <div class="rule-box dont-throw">
+              <h4>❌ Qué NO depositar:</h4>
+              <ul>
+                <li>Baterías y pilas (son residuos peligrosos)</li>
+                <li>Latas de pintura, aerosoles o insecticidas</li>
+                <li>Sartenes de teflón quemadas</li>
+                <li>Aparatos electrónicos pesados</li>
+              </ul>
+            </div>
+          </div>
+          <div class="eco-fact">⚡ Ahorro de energía: hasta 95% comparado con aluminio nuevo.</div>
+        </div>
+        <div class="panel-media">
+          <svg class="panel-image-preview" viewBox="0 0 160 160" fill="none">
+            <circle cx="80" cy="80" r="70" fill="#eceff1"/>
+            <ellipse cx="80" cy="45" rx="30" ry="12" fill="#cfd8dc" stroke="#78909c" stroke-width="3"/>
+            <path d="M50 45V115C50 122 63 127 80 127C97 127 110 122 110 115V45" fill="#90a4ae" stroke="#78909c" stroke-width="3"/>
+            <path d="M60 70C70 75 90 75 100 70" stroke="#ffffff" stroke-width="3"/>
+          </svg>
+          <h4>Aplasta tus latas</h4>
+          <p>Al aplastar las latas con el pie facilitas su recolección y transporte ecológico.</p>
+        </div>
+      </div>
+
+      <!-- SUBSECCIÓN: RESIDUOS ESPECIALES Y PELIGROSOS -->
+      <div class="special-waste-section">
+        <div class="special-waste-header">
+          <span style="font-size: 2.2rem;">⚠️</span>
+          <div>
+            <h3>Residuos de Manejo Especial: ¡No los tires a la basura común!</h3>
+            <p style="color: #6d4c41; font-size: 0.95rem;">Estos materiales contienen químicos pesados o tóxicos y requieren puntos limpios de recolección especial:</p>
+          </div>
+        </div>
+        <div class="special-waste-grid">
+          <div class="special-waste-card">
+            <h4>🔋 Pilas y Baterías</h4>
+            <p>Contienen mercurio, plomo y cadmio. Una sola pila alcalina contamina 175,000 litros de agua. Deposítalas en contenedores de puntos limpios de tu ciudad.</p>
+          </div>
+          <div class="special-waste-card">
+            <h4>📱 Aparatos Electrónicos (RAEE)</h4>
+            <p>Cables, cargadores, computadoras y teléfonos viejos poseen metales valiosos y plásticos ignífugos que deben desmontarse en plantas especializadas.</p>
+          </div>
+          <div class="special-waste-card">
+            <h4>💡 Bombillos y Lámparas</h4>
+            <p>Los tubos fluorescentes y bombillos ahorradores contienen gases de mercurio tóxicos. Llévalos enteros en sus cajas a centros autorizados.</p>
+          </div>
+          <div class="special-waste-card">
+            <h4>💊 Medicinas Vencidas</h4>
+            <p>Nunca tires medicamentos por el inodoro ni a la basura: contaminan los acuíferos subterráneos. Entrégalos en contenedores de farmacias.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-full" id="consejos">
+      <div class="section-title-wrap">
+        <span class="section-pill-tag city">Acciones Comunitarias y Personales</span>
+        <h2 class="section-heading">Consejos para el Hogar, Calles, Ciudades y Parques</h2>
+        <p class="section-subtext">Cuidar el medio ambiente no se limita a nuestra casa: mantener limpias nuestras calles, aceras, parques públicos y ciudades enteras es tarea de todos.</p>
+      </div>
+
+      <!-- Filtros por Categoría de Consejos -->
+      <div class="tips-category-tabs">
+        <button class="category-tab-btn active" data-category-filter="all">🌟 Ver Todos</button>
+        <button class="category-tab-btn" data-category-filter="hogar">🏠 En el Hogar</button>
+        <button class="category-tab-btn" data-category-filter="ciudad">🏙️ Calles y Ciudades</button>
+        <button class="category-tab-btn" data-category-filter="parque">🌳 Parques y Naturaleza</button>
+      </div>
+
+      <div class="tips-grid">
+        <!-- Hogar 1 -->
+        <div class="tip-card" data-category="hogar">
+          <span class="tip-card-tag tag-home">Hogar Verde</span>
+          <div class="tip-icon-bubble">🏠</div>
+          <h3>Separa la basura desde la cocina</h3>
+          <p>Coloca al menos dos recipientes en tu cocina: uno para restos orgánicos y otro para reciclables secos (plástico, papel, metal, vidrio).</p>
+        </div>
+
+        <!-- Hogar 2 -->
+        <div class="tip-card" data-category="hogar">
+          <span class="tip-card-tag tag-home">Hogar Verde</span>
+          <div class="tip-icon-bubble">🚰</div>
+          <h3>Limpia y seca antes de reciclar</h3>
+          <p>Un envase sucio puede arruinar un lote entero de papel o cartón. Enjuaga brevemente con un chorrito de agua para no generar malos olores.</p>
+        </div>
+
+        <!-- Hogar 3 -->
+        <div class="tip-card" data-category="hogar">
+          <span class="tip-card-tag tag-home">Hogar Verde</span>
+          <div class="tip-icon-bubble">🌱</div>
+          <h3>Haz tu propia composta casera</h3>
+          <p>Si tienes jardín o macetas, junta las cáscaras de plátano, manzana y hojas secas. En pocos meses tendrás abono 100% natural y libre de químicos.</p>
+        </div>
+
+        <!-- Ciudad 1 -->
+        <div class="tip-card" data-category="ciudad">
+          <span class="tip-card-tag tag-city">Calles y Ciudad</span>
+          <div class="tip-icon-bubble">🎒</div>
+          <h3>Guarda tu basura en el bolsillo</h3>
+          <p>Si estás caminando o en el transporte público y no ves basureros, guarda tus envoltorios o botellas en tu mochila o bolsillo hasta llegar a casa. ¡Nunca tires basura por la ventanilla!</p>
+        </div>
+
+        <!-- Ciudad 2 -->
+        <div class="tip-card" data-category="ciudad">
+          <span class="tip-card-tag tag-city">Calles y Ciudad</span>
+          <div class="tip-icon-bubble">🚛</div>
+          <h3>Respeta los horarios de recolección</h3>
+          <p>Saca las bolsas de basura únicamente en los días y horarios que pasa el camión recolector. Así evitas que los perros callejeros o la lluvia rompan las bolsas y ensucien las aceras.</p>
+        </div>
+
+        <!-- Ciudad 3 -->
+        <div class="tip-card" data-category="ciudad">
+          <span class="tip-card-tag tag-city">Calles y Ciudad</span>
+          <div class="tip-icon-bubble">🧹</div>
+          <h3>Barre hacia adentro, no a la cuneta</h3>
+          <p>Al barrer el frente de tu casa, recoge el polvo y hojas en un recogedor. Nunca tires la basura a las cunetas o alcantarillas, ya que taponan los tragantes y causan inundaciones severas.</p>
+        </div>
+
+        <!-- Ciudad 4 -->
+        <div class="tip-card" data-category="ciudad">
+          <span class="tip-card-tag tag-city">Calles y Ciudad</span>
+          <div class="tip-icon-bubble">🚭</div>
+          <h3>No tires colillas de cigarrillos</h3>
+          <p>Una sola colilla contiene microplásticos y sustancias cancerígenas que pueden contaminar hasta 50 litros de agua cuando la lluvia la arrastra hacia los ríos y alcantarillas.</p>
+        </div>
+
+        <!-- Parques 1 -->
+        <div class="tip-card" data-category="parque">
+          <span class="tip-card-tag tag-park">Parques y Naturaleza</span>
+          <div class="tip-icon-bubble">🌳</div>
+          <h3>Cuidado con los vidrios en áreas verdes</h3>
+          <p>Nunca dejes botellas o trozos de vidrio sobre el césped o la hojarasca de los parques. Bajo el sol caliente, el vidrio actúa como una lupa y puede provocar incendios forestales devastadores.</p>
+        </div>
+
+        <!-- Parques 2 -->
+        <div class="tip-card" data-category="parque">
+          <span class="tip-card-tag tag-park">Parques y Naturaleza</span>
+          <div class="tip-icon-bubble">🐕</div>
+          <h3>Paseo limpio con tus mascotas</h3>
+          <p>Cuando lleves a pasear a tu perro a un parque o calle, lleva siempre bolsas para recoger sus heces. Así mantenemos los espacios públicos higiénicos para los niños y familias.</p>
+        </div>
+
+        <!-- Parques 3 -->
+        <div class="tip-card" data-category="parque">
+          <span class="tip-card-tag tag-park">Parques y Naturaleza</span>
+          <div class="tip-icon-bubble">🤝</div>
+          <h3>Jornadas de limpieza comunitaria</h3>
+          <p>Organiza con tus vecinos brigadas ecológicas para pintar bancas, recoger residuos en canchas y parques, y sembrar árboles nativos que den sombra y atraigan pajaritos y abejas.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-full" id="juego">
+      <div class="section-title-wrap">
+        <span class="section-pill-tag">Aprende Jugando</span>
+        <h2 class="section-heading">Mini-Juego: ¿En qué contenedor va?</h2>
+        <p class="section-subtext">Prueba tus conocimientos: mira el residuo que aparece en pantalla y toca el contenedor correcto.</p>
+      </div>
+
+      <div class="game-container">
+        <!-- Marcador -->
+        <div class="game-score-bar">
+          <div>Puntuación: <span id="gameScore">0</span> pts 🌟</div>
+          <div>Racha de Aciertos: <span id="gameStreak">0</span> 🔥</div>
+        </div>
+
+        <!-- Escenario del residuo actual -->
+        <div class="game-item-stage">
+          <span class="current-trash-item" id="currentTrashIcon">🍎</span>
+          <h3 class="current-trash-name" id="currentTrashName">Cáscara de Manzana</h3>
+        </div>
+
+        <!-- Botones de Botes de Selección -->
+        <div class="game-bins-row">
+          <button class="game-bin-btn" data-target-category="organico" style="border-color: #2e7d32;">
+            <span class="bin-icon">🟢</span>
+            <span class="bin-name" style="color: #2e7d32;">Orgánicos</span>
+          </button>
+          <button class="game-bin-btn" data-target-category="plastico" style="border-color: #1976d2;">
+            <span class="bin-icon">🔵</span>
+            <span class="bin-name" style="color: #1976d2;">Plásticos</span>
+          </button>
+          <button class="game-bin-btn" data-target-category="papel" style="border-color: #fbc02d;">
+            <span class="bin-icon">🟡</span>
+            <span class="bin-name" style="color: #f57f17;">Papel/Cartón</span>
+          </button>
+          <button class="game-bin-btn" data-target-category="vidrio" style="border-color: #00796b;">
+            <span class="bin-icon">🟢</span>
+            <span class="bin-name" style="color: #00796b;">Vidrio</span>
+          </button>
+          <button class="game-bin-btn" data-target-category="metal" style="border-color: #607d8b;">
+            <span class="bin-icon">⚪</span>
+            <span class="bin-name" style="color: #455a64;">Metal</span>
+          </button>
+        </div>
+
+        <!-- Mensaje de Retroalimentación -->
+        <div class="game-feedback" id="gameFeedback">¡Selecciona el bote adecuado para clasificar este residuo!</div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========================================================
+       MODAL FLOTANTE DE CONTACTO ("MINI VENTANITA FLOTANTE")
+       ======================================================== -->
+  <div class="modal-overlay" id="contactModal" aria-hidden="true" role="dialog" aria-labelledby="modalContactTitle">
+    <div class="modal-card">
+      <button class="modal-close-btn" id="closeContactBtn" aria-label="Cerrar ventana">✕</button>
+      
+      <div class="modal-header">
+        <div class="modal-icon-top">🌍📬</div>
+        <h3 class="modal-title" id="modalContactTitle">¡Contáctanos!</h3>
+        <p class="modal-desc">Únete a nuestra comunidad verde. Escríbenos, chatea con nosotros o llámanos para consejos de educación ambiental.</p>
+      </div>
+
+      <!-- Enlaces a Redes Sociales y Teléfono según solicitó el usuario -->
+      <div class="social-buttons-grid">
+        <!-- WhatsApp con el número 82365846 -->
+        <a href="https://wa.me/50582365846?text=Hola,%20deseo%20más%20información%20sobre%20educación%20ambiental%20y%20reciclaje" target="_blank" rel="noopener noreferrer" class="social-btn whatsapp">
+          <div class="social-icon-box">💬</div>
+          <div class="social-text">
+            <span class="social-label">WhatsApp Directo (Chatear ahora)</span>
+            <span class="social-name">+505 8236-5846</span>
+          </div>
+          <span>→</span>
+        </a>
+
+        <!-- Llamada telefónica directa al número 82365846 -->
+        <a href="tel:+50582365846" class="social-btn" style="background: linear-gradient(135deg, #2e7d32 0%, #1b5e20 100%);">
+          <div class="social-icon-box">📞</div>
+          <div class="social-text">
+            <span class="social-label">Llamada Telefónica Directa</span>
+            <span class="social-name">+505 8236-5846</span>
+          </div>
+          <span>→</span>
+        </a>
+
+        <!-- Instagram -->
+        <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" class="social-btn instagram">
+          <div class="social-icon-box">📸</div>
+          <div class="social-text">
+            <span class="social-label">Síguenos en</span>
+            <span class="social-name">Instagram (@EcoVidaPlaneta)</span>
+          </div>
+          <span>→</span>
+        </a>
+
+        <!-- Facebook -->
+        <a href="https://facebook.com/" target="_blank" rel="noopener noreferrer" class="social-btn facebook">
+          <div class="social-icon-box">👥</div>
+          <div class="social-text">
+            <span class="social-label">Página de</span>
+            <span class="social-name">Facebook (EcoVida Cuidado Ambiental)</span>
+          </div>
+          <span>→</span>
+        </a>
+      </div>
+
+      <!-- Formulario para enviar mensaje rápido -->
+      <form class="contact-quick-form" id="quickContactForm">
+        <h4>Envíanos un mensaje o pregunta ambiental</h4>
+        <div class="form-group">
+          <input type="text" id="nombreContacto" class="form-input" placeholder="Tu nombre" required>
+        </div>
+        <div class="form-group">
+          <textarea id="mensajeContacto" class="form-textarea" placeholder="Escribe tu duda o consejo para el planeta..." required></textarea>
+        </div>
+        <button type="submit" class="btn-send-message">Enviar Mensaje 🍃</button>
+        <p id="formFeedback" style="text-align: center; margin-top: 0.6rem; font-weight: 700; font-size: 0.95rem;"></p>
+      </form>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="binDetailModal" aria-hidden="true" role="dialog">
+    <div class="modal-card bin-modal-card">
+      <button class="modal-close-btn" id="closeBinDetailBtn" aria-label="Cerrar">✕</button>
+      <div class="modal-header">
+        <div class="modal-icon-top" id="binModalIcon">♻️</div>
+        <h3 class="modal-title" id="binModalTitle">Contenedor</h3>
+        <p class="modal-desc" id="binModalDesc" style="margin-top: 0.5rem;"></p>
+      </div>
+      <div style="background: #f1f8e9; padding: 1.2rem; border-radius: 14px; margin-bottom: 1rem;">
+        <strong style="color: #2e7d32; display: block; margin-bottom: 0.3rem;">✅ Ejemplos de lo que va aquí:</strong>
+        <p id="binModalWhat" style="color: #335337; font-size: 0.95rem;"></p>
+      </div>
+      <div style="background: #fff9c4; padding: 1rem; border-radius: 14px;">
+        <strong style="color: #f57f17; display: block; margin-bottom: 0.3rem;">⏳ Tiempo en la naturaleza:</strong>
+        <p id="binModalTime" style="color: #5d4037; font-size: 0.95rem;"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
